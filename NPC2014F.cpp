@@ -22,7 +22,10 @@ int main(int argc, char const *argv[])
 		req[c-'a']=r;
 	}
 
-	
+	int st=0,en=0;
+
+	int minsize=9999999,found=0;
+
 
 
 	return 0;
