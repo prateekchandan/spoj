@@ -26,6 +26,18 @@ int main(int argc, char const *argv[])
 
 	int minsize=9999999,found=0,temp;
 	while(st<=en && en < l){
+
+		/* debug */
+
+
+		cout<<st<<" : "<<en<<endl;
+		for (int i = 0; i < 26; ++i)
+		{
+			cout<<req[i]<<" ";
+			cout<<endl;
+		}
+
+		/***************************/
 		int ok=1;
 		for (int i = 0; i < 26; ++i)
 		{
