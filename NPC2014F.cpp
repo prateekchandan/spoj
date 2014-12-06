@@ -25,17 +25,17 @@ int main(int argc, char const *argv[])
 	int st=0,en=0;
 
 	int minsize=9999999,found=0,temp;
-	while(st<=en && en < l){
+	while(st<=en && en <= l){
 
 		/* debug */
 
 
-		cout<<st<<" : "<<en<<endl;
+		/*cout<<st<<" : "<<en<<endl;
 		for (int i = 0; i < 26; ++i)
 		{
 			cout<<req[i]<<" ";
-			cout<<endl;
 		}
+		cout<<endl;
 
 		/***************************/
 		int ok=1;
@@ -57,7 +57,10 @@ int main(int argc, char const *argv[])
 			st++;
 		}
 		else{
-			req[s[en]-'a']--;
+			if(en<l)
+				req[s[en]-'a']--;
+			else
+				break;
 			en++;
 		}
 	}
