@@ -8,22 +8,13 @@ using namespace std;
 const int total=100001;
 int main(int argc, char const *argv[])
 {
-	vector<int> res(total,1),p(total,1);
+	vector<int> res(total,0),p(total,1);
 	for (int i = 2; i < total; ++i)
-	{
-		int count=0;
-		if(p[i]){
-			for (int j = i; j < total; j+=i)
-			{
-				res[j]+=count;
-									
-				if(p[j]){
-					res[j]++;
-					count++;
-				}
-				p[j]=0;
-			}
-		}
+	{	
+		for (int j = i; j < total; j+=i)
+		{
+			res[j]++;
+		}	
 	}
 	for (int i = 1; i < total; ++i)
 	{
